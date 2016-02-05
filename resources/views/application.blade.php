@@ -106,9 +106,9 @@
                         <div class="form-group">
                             <label for="region">Region <i class="fa fa-asterisk red"></i></label>
                             <select name="region_code" class="form-control" id="region" required>
-                                <option value="3" @if($regdata['region_code']==3) selected @endif>BTAD</option>
-                                <option value="2" @if($regdata['region_code']==2) selected @endif>North East India</option>
-                                <option value="1" @if($regdata['region_code']==1) selected @endif>All India</option>
+                                <option value="3" @if($regdata['region_code']==3) selected @endif>Bodoland Territorial Area Districts</option>
+                                <option value="2" @if($regdata['region_code']==2) selected @endif>North East (Exclusing BTAD)</option>
+                                <option value="1" @if($regdata['region_code']==1) selected @endif>All India (Exclusing NE & BTAD)</option>
 
                             </select>
                         </div>
@@ -122,10 +122,11 @@
                         <div class="form-group">
                             <label for="category">Category <i class="fa fa-asterisk red"></i></label>
                             <select name="category" class="form-control" id="category" required>
-                                <option value="1" @if($regdata['category']==1) selected @endif>General/Open</option>
-                                <option value="2" @if($regdata['category']==2) selected @endif>OBC</option>
-                                <option value="3" @if($regdata['category']==3) selected @endif>SC</option>
-                                <option value="4" @if($regdata['category']==4) selected @endif>ST</option>
+                                <option value="1" @if($regdata['category']==1) selected @endif>Open (Unreserved)</option>
+                                <option value="2" @if($regdata['category']==2) selected @endif>OBC (Other Backward Classes)</option>
+                                <option value="3" @if($regdata['category']==3) selected @endif>SC (Schedule Cast)</option>
+                                <option value="4" @if($regdata['category']==4) selected @endif>ST (Schedule Tribe)</option>
+                                <option value="5" @if($regdata['category']==5) selected @endif>PD (Physically Disabled)</option>
 
                             </select>
                         </div>
@@ -134,10 +135,13 @@
                         <div class="form-group">
                             <label for="entryScheme">Entry Scheme <i class="fa fa-asterisk red"></i></label>
                             <select name="entry_scheme" class="form-control" id="entryScheme" required>
-                                <option value="1" @if($regdata['entry_scheme']==1) selected @endif>CITEE-2016 (Diploma)</option>
-                                <option value="2" @if($regdata['entry_scheme']==2) selected @endif>CITDEE-2016 (Degree/B.Tech)</option>
-                                <option value="3" @if($regdata['entry_scheme']==3) selected @endif>CITLET-2016 (Lateral Entry)</option>
-                                <option value="4" @if($regdata['entry_scheme']==4) selected @endif>CITVAT-2016 (Vertical Entry)</option>
+                                <option value="1" @if($regdata['entry_scheme']==1) selected @endif>CITEE (Diploma)</option>
+                                <option value="2" @if($regdata['entry_scheme']==2) selected @endif>CITDEE Degree (B.Tech) (Direct Entry)</option>
+                                <option value="3" @if($regdata['entry_scheme']==3) selected @endif>JEE (JEE Mains)</option>
+                                <option value="4" @if($regdata['entry_scheme']==4) selected @endif>CITVAT Degree (Vertical Entry)</option>
+                                <option value="5" @if($regdata['entry_scheme']==5) selected @endif>CITLET Degree (Lateral Entry)</option>
+                                <option value="6" @if($regdata['entry_scheme']==6) selected @endif>CITDEE/JEE Degree (Direct & JEE Mains)</option>
+                                <option value="7" @if($regdata['entry_scheme']==7) selected @endif>CITLET/CITVAT Degree (Lateral/Vertical)</option>
 
                             </select>
                         </div>
@@ -149,14 +153,16 @@
                         <div class="form-group">
                             <label for="centre">Center of Preference 1 <i class="fa fa-asterisk red"></i></label>
                             <select name="center" class="form-control" id="centre" required>
-                                <option value="1" @if($regdata['center']==1) selected @endif>Kokrajhar, Assam</option>
-                                <option value="2" @if($regdata['center']==2) selected @endif>Chirang, Assam</option>
-                                <option value="3" @if($regdata['center']==3) selected @endif>Baksha, Assam</option>
-                                <option value="4" @if($regdata['center']==4) selected @endif>Udalguri, Assam</option>
-                                <option value="5" @if($regdata['center']==5) selected @endif>Jorhat, Assam</option>
-                                <option value="6" @if($regdata['center']==6) selected @endif>Kolkata, West Bengal</option>
-                                <option value="7" @if($regdata['center']==7) selected @endif>New Delhi, Delhi</option>
-                                <option value="8" @if($regdata['center']==8) selected @endif>Chennai, Tamil Nadu</option>
+                                <option class="disabled">Choose center of preference 1</option>
+                                <option value="1" @if($regdata['center']==1) selected @endif>KOK (Kokrajhar)</option>
+                                <option value="2" @if($regdata['center']==2) selected @endif>GUW (Guwahati)</option>
+                                <option value="3" @if($regdata['center']==3) selected @endif>UDL (Udalguri)</option>
+                                <option value="4" @if($regdata['center']==4) selected @endif>BAR (Barama)</option>
+                                <option value="5" @if($regdata['center']==5) selected @endif>KAJ (Kajalgaon)</option>
+                                <option value="6" @if($regdata['center']==6) selected @endif>JOR (Jorhat)</option>
+                                <option value="7" @if($regdata['center']==7) selected @endif>NDL (New Delhi)</option>
+                                <option value="8" @if($regdata['center']==8) selected @endif>CHN (Chennai)</option>
+                                <option value="9" @if($regdata['center']==9) selected @endif>KOL (Kolkata)</option>
                             </select>
                         </div>
                     </div>
@@ -164,15 +170,16 @@
                         <div class="form-group">
                             <label for="centre">Center of Preference 2  <i class="fa fa-asterisk red"></i></label>
                             <select name="center_2" class="form-control" id="centre" required>
-
-                                <option value="2" @if($regdata['center_2']==2) selected @endif>Chirang, Assam</option>
-                                <option value="1" @if($regdata['center_2']==1) selected @endif>Kokrajhar, Assam</option>
-                                <option value="3" @if($regdata['center_2']==3) selected @endif>Baksha, Assam</option>
-                                <option value="4" @if($regdata['center_2']==4) selected @endif>Udalguri, Assam</option>
-                                <option value="5" @if($regdata['center_2']==5) selected @endif>Jorhat, Assam</option>
-                                <option value="6" @if($regdata['center_2']==6) selected @endif>Kolkata, West Bengal</option>
-                                <option value="7" @if($regdata['center_2']==7) selected @endif>New Delhi, Delhi</option>
-                                <option value="8" @if($regdata['center_2']==8) selected @endif>Chennai, Tamil Nadu</option>
+                                <option class="disabled">Choose center of preference 2</option>
+                                <option value="1" @if($regdata['center']==1) selected @endif>KOK (Kokrajhar)</option>
+                                <option value="2" @if($regdata['center']==2) selected @endif>GUW (Guwahati)</option>
+                                <option value="3" @if($regdata['center']==3) selected @endif>UDL (Udalguri)</option>
+                                <option value="4" @if($regdata['center']==4) selected @endif>BAR (Barama)</option>
+                                <option value="5" @if($regdata['center']==5) selected @endif>KAJ (Kajalgaon)</option>
+                                <option value="6" @if($regdata['center']==6) selected @endif>JOR (Jorhat)</option>
+                                <option value="7" @if($regdata['center']==7) selected @endif>NDL (New Delhi)</option>
+                                <option value="8" @if($regdata['center']==8) selected @endif>CHN (Chennai)</option>
+                                <option value="9" @if($regdata['center']==9) selected @endif>KOL (Kolkata)</option>
                             </select>
                         </div>
                     </div>
@@ -184,15 +191,16 @@
                         <div class="form-group">
                             <label for="centre">Center of Preference 3  <i class="fa fa-asterisk red"></i></label>
                             <select name="center_3" class="form-control" id="centre" required>
-
-                                <option value="3" @if($regdata['center_3']==3) selected @endif>Baksha, Assam</option>
-                                <option value="1" @if($regdata['center_3']==1) selected @endif>Kokrajhar, Assam</option>
-                                <option value="2" @if($regdata['center_3']==2) selected @endif>Chirang, Assam</option>
-                                <option value="4" @if($regdata['center_3']==4) selected @endif>Udalguri, Assam</option>
-                                <option value="5" @if($regdata['center_3']==5) selected @endif>Jorhat, Assam</option>
-                                <option value="6" @if($regdata['center_3']==6) selected @endif>Kolkata, West Bengal</option>
-                                <option value="7" @if($regdata['center_3']==7) selected @endif>New Delhi, Delhi</option>
-                                <option value="8" @if($regdata['center_3']==8) selected @endif>Chennai, Tamil Nadu</option>
+                                <option class="disabled">Choose center of preference 1</option>
+                                <option value="1" @if($regdata['center']==1) selected @endif>KOK (Kokrajhar)</option>
+                                <option value="2" @if($regdata['center']==2) selected @endif>GUW (Guwahati)</option>
+                                <option value="3" @if($regdata['center']==3) selected @endif>UDL (Udalguri)</option>
+                                <option value="4" @if($regdata['center']==4) selected @endif>BAR (Barama)</option>
+                                <option value="5" @if($regdata['center']==5) selected @endif>KAJ (Kajalgaon)</option>
+                                <option value="6" @if($regdata['center']==6) selected @endif>JOR (Jorhat)</option>
+                                <option value="7" @if($regdata['center']==7) selected @endif>NDL (New Delhi)</option>
+                                <option value="8" @if($regdata['center']==8) selected @endif>CHN (Chennai)</option>
+                                <option value="9" @if($regdata['center']==9) selected @endif>KOL (Kolkata)</option>
                             </select>
                         </div>
                     </div>
@@ -201,7 +209,7 @@
                             <label for="nationality">Nationality <i class="fa fa-asterisk red"></i></label>
                             <select name="nationality" class="form-control" id="nationality" required>
                                 <option value="1" @if($regdata['nationality']==1) selected @endif>Indian</option>
-                                <option value="2" @if($regdata['nationality']==2) selected @endif>Others</option>
+                                <option value="2" @if($regdata['nationality']==2) selected @endif>Non-Indian</option>
                             </select>
                         </div>
                     </div>
