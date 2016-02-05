@@ -1,0 +1,48 @@
+Credits
+
+
+ 	Coded with ♥ by:
+ 	Sanjib Narzary,
+ 	Assistant Professor & HoD,
+ 	Department of Computer Science and Engineering,
+ 	Central Institute of Technology, Kokrajhar,
+ 	PO: Rangalikhata,
+ 	Dist: Kokrajhar, BTAD, Assam,
+ 	India - 783370
+
+ 	eMail: san@cit.ac.in or Twitter: https://www.twitter.com/SanjibNarzary
+
+ 	LICENSE
+ 	=======
+
+ 	THIS SOFTWARE IS PROVIDED BY SANJIB NARZARY ``AS IS'' AND
+ 	ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ 	THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ 	PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL SANJIB NARZARY
+ 	OR DEPARTMENT MEMBERS OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ 	INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ 	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ 	SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ 	HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ 	STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ 	ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ 	OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ 	==================================x================================
+
+
+Libraries
+
+Frameworks: Laravel, Bootstrap, Font Awesome, tinyMCE
+
+Languages: PHP, HTML, JQuery
+
+Databases: SQLite3 during development, MySQL during production
+
+Server: apache as http, nginx as application
+
+Caching: file during development, Redis during production
+
+Mail: Mailgun API
+
+SMS: Hulksms API

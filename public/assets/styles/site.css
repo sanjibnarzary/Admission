@@ -1,0 +1,24 @@
+.navbar-blue {
+    background-color: #00bcd4;
+    border-color: #00a5ba;
+	color:#FFF;
+}
+.banner{
+	width: 100%; 
+	display: block;
+	margin-top:-5%;
+	margin-bottom:-1.8%;
+	}
+.red{
+	color:#F00;
+	}
+.sixty{
+	width:60px;
+	}
+.two{
+	 margin-bottom:2px;
+	}
+.uc{
+
+	text-transform: uppercase;
+}
