@@ -398,7 +398,7 @@
                         </div>
                     </div>
                 @else
-                    <a type="submit" href="/application/payment" name="continue" class="btn btn-info btn-block"><i class="fa fa-rupee"></i> Make Payment</a>
+                    <a type="submit" href="/paymentProcessing.php" name="continue" class="btn btn-info btn-block"><i class="fa fa-rupee"></i> Make Payment</a>
                 @endif
                 <br>
                 <br>

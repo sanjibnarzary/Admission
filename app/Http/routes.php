@@ -52,7 +52,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/application/photo/edit','ApplicationPhotoController@editPhoto');
     Route::get('/application/preview/whole','ApplicationController@previewWhole');
 
-    Route::get('/application/payment','ApplicationPaymentController@paymentProcess');
+    //Route::get('/application/payment','ApplicationPaymentController@paymentProcess');
+    Route::get('/paymentProcessing.php','ApplicationPaymentController@paymentProcess');
 
 // Authentication routes...
     Route::get('auth/login', 'Auth\AuthController@getLogin');

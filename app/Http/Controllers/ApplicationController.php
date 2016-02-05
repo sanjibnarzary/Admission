@@ -247,7 +247,7 @@ class ApplicationController extends Controller
         }
         elseif($data['application_status']==555){
 
-            return Redirect::to('application/payment');
+            return Redirect::to('paymentProcessing.php');
         }
         else{
 
@@ -295,7 +295,7 @@ class ApplicationController extends Controller
             }
             elseif($data['application_status']==555){
 
-                return Redirect::to('application/payment');
+                return Redirect::to('paymentProcessing.php');
             }
 
             $regdata=$user->application->toArray();
