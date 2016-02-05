@@ -22,7 +22,7 @@ class ApplicationPaymentController extends Controller
         }
         else{
 
-            return Redirect::to('/auth/login');
+            return view('application.payment.error');
         }
         $u = $user;
         $applicationData = $user->application;
