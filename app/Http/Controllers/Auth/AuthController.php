@@ -127,7 +127,7 @@ class AuthController extends Controller
                     $m->to($user->email, $user->username)->subject('Account created CIT Admission 2016');
                 });
                 $sms_key = env('SMS_API_KEY','30456B3180D00208553');
-                $message = '{Your+SMS+Activation+Code+for+CIT+Kokrajhar+'.$input['mobile_code'].'}';
+                $message = 'Your+SMS+Activation+Code+for+CIT+Kokrajhar+Admission+'.$input['mobile_code'].'';
                 file_get_contents('http://shortcode.hulksms.com/sms/api/http/send.php?api_key='.$sms_key.'&numbers='.$user->mobile_number.'&message='.$message.'&senderid="CITKOK"');
                 return Redirect::to('dashboard');
             }
@@ -196,6 +196,9 @@ class AuthController extends Controller
             if($user->mobile_code == $mobileCode){
                 $mobileCode = rand(0,909909);
                 $user->update(['mobile_active' => '1','mobile_code' => $mobileCode]);
+                $sms_key = env('SMS_API_KEY','30456B3180D00208553');
+                $message = 'Thank+you,+your+mobile+number+is+activated+for+CIT+Admission';
+                file_get_contents('http://shortcode.hulksms.com/sms/api/http/send.php?api_key='.$sms_key.'&numbers='.$user->mobile_number.'&message='.$message.'&senderid="CITKOK"');
                 return Redirect::to('dashboard');
             }
             else{
